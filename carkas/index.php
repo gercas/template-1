@@ -1,7 +1,8 @@
 <?php
-    $path = '/carkas/carkas/';
+
+    include 'config.php';
     include 'system/vendor/router.php';
-    include 'system/routes.php';
+    include 'routes.php';
 
 
     // Default application path
@@ -16,4 +17,4 @@
         return '/' . trim($path, '/') . '/' . trim($url, '/');
     }
 
-    
+    include 'template/page.php';
