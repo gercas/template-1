@@ -4,15 +4,10 @@ global $path;
 // Instantiate router
 $router = new AltoRouter();
 $router->setBasePath($path);
-global $btn;
-foreach ($buttons as $btn){
 
-    $router->map('GET', $btn, function() {
-        global $btn;
-        require_once 'views/'.$btn;
-    });
-
-}
+$router->map('GET', '/', function() {
+    require_once 'views/pagrindinis.php';
+});
 
 
 // Assign routes

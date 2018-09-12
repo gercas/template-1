@@ -1,7 +1,4 @@
 <?php
 
-    $path = '/carkas/carkas/';
+    $path = 'carkas/carkas/';
 
-    $buttons = array();
-    $buttons[] = '';
-    $buttons[] = 'pagrindinis.php';
