@@ -6,9 +6,17 @@ $router = new AltoRouter();
 $router->setBasePath($path);
 
 $router->map('GET', '/', function() {
-    require_once 'views/pagrindinis.php';
+    include 'system/languages/'. $_SESSION['lang'] .'.php';
+    require_once 'views/welcome.php';
 });
-
+$router->map('GET', '/welcome', function() {
+    include 'system/languages/'. $_SESSION['lang'] .'.php';
+    require_once 'views/welcome.php';
+});
+$router->map('GET', '/contacts', function() {
+    include 'system/languages/'. $_SESSION['lang'] .'.php';
+    require_once 'views/contacts.php';
+});
 
 // Assign routes
 $match = $router->match();
